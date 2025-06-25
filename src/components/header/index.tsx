@@ -1,13 +1,13 @@
-import logoImg from '@/assets/logo.svg'
-import Image from 'next/image'
-import Link from 'next/link'
+import logoImg from "@/assets/logo.svg";
+import Image from "next/image";
+import Link from "next/link";
+import DropdownMenuCheckboxes from "../dropDownmenu/dropDownmenu";
 
-import { LiaGamepadSolid } from 'react-icons/lia'
+import { LiaGamepadSolid } from "react-icons/lia";
 
-
-export function Header(){
-  return(
-    <header className="w-full h-28 bg-slate-100 text-black px-2">
+export function Header() {
+  return (
+    <header className="dark:bg-zinc-900 w-full h-28 bg-slate-100 text-black px-2">
       <div className="max-w-screen-xl mx-auto flex justify-center items-center h-28 sm:justify-between">
         <nav className="flex justify-center items-center gap-4">
           <Link href="/">
@@ -20,12 +20,8 @@ export function Header(){
             />
           </Link>
 
-          <Link href="/">
-            Games
-          </Link>
-          <Link href="/profile">
-            Perfil
-          </Link>
+          <Link href="/">Games</Link>
+          <Link href="/profile">Perfil</Link>
         </nav>
 
         <div className="hidden sm:flex justify-center items-center">
@@ -33,8 +29,8 @@ export function Header(){
             <LiaGamepadSolid size={34} color="#475569" />
           </Link>
         </div>
-
+        <DropdownMenuCheckboxes />
       </div>
     </header>
-  )
+  );
 }
