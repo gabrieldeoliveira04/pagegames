@@ -9,7 +9,7 @@ async function getData(title: string) {
 
     const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&title=${decodeTitle}`)
     return res.json();
-  } catch (_err) {
+  } catch {
     return null;
   }
 }

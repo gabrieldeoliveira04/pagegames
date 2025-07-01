@@ -8,7 +8,7 @@ async function getDalyGame() {
       { next: { revalidate: 320 } },
     );
     return res.json();
-  } catch (_err) {
+  } catch {
     throw new Error("Failed to fetch data");
   }
 }
@@ -19,7 +19,7 @@ async function getGamesData() {
       next: { revalidate: 320 },
     });
     return res.json();
-  } catch (err) {
+  } catch {
     throw new Error("Failed to fetch data");
   }
 }

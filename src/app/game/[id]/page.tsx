@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PropsParams): Promise<Metadat
 
 
 
-  } catch (_err) {
+  } catch {
     return {
       title: "DalyGames - Descubra jogos incríveis para se divertir."
     }
@@ -55,7 +55,7 @@ async function getData(id: string) {
   try {
     const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
     return res.json();
-  } catch (_err) {
+  } catch {
     throw new Error("Failed to fetch data")
   }
 }
@@ -65,7 +65,7 @@ async function getGameSorted() {
   try {
     const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game_day`, { cache: "no-store" })
     return res.json();
-  } catch (_err) {
+  } catch {
     throw new Error("Failed to fetch data")
   }
 }
