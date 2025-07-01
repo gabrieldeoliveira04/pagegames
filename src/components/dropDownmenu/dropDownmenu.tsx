@@ -11,7 +11,6 @@ import {
 import { Button } from "../ui/button";
 import { Settings } from "lucide-react";
 import { ThemeButton } from "../themechange/themeButton";
-import LanguageSelectorFlags from "../translate/translate";
 
 export default function DropdownMenuCheckboxes() {
   return (
@@ -28,7 +27,6 @@ export default function DropdownMenuCheckboxes() {
           <ThemeButton />
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <LanguageSelectorFlags />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

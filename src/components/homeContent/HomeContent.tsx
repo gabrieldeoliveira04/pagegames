@@ -7,7 +7,6 @@ import { BsArrowRightSquare } from "react-icons/bs";
 import { Input } from "../input";
 import { GameCard } from "../GameCard";
 import { Container } from "../container";
-import GoogleTranslateLoader from "../GoogleTranslateLoader/GoogleTranslateLoader";
 
 type Props = {
   dalyGame: GameProps;
@@ -52,9 +51,6 @@ export default function HomeContent({ dalyGame, data }: Props) {
           ))}
         </section>
       </Container>
-
-      {/* Loader do Google Translate no final da página */}
-      <GoogleTranslateLoader />
     </main>
   );
 }
