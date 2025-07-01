@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PropsParams): Promise<Metadat
 
 
 
-  } catch (err) {
+  } catch (_err) {
     return {
       title: "DalyGames - Descubra jogos incríveis para se divertir."
     }

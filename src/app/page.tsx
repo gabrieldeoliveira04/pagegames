@@ -8,7 +8,7 @@ async function getDalyGame() {
       { next: { revalidate: 320 } },
     );
     return res.json();
-  } catch (err) {
+  } catch (_err) {
     throw new Error("Failed to fetch data");
   }
 }
