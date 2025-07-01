@@ -55,7 +55,7 @@ async function getData(id: string) {
   try {
     const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
     return res.json();
-  } catch (err) {
+  } catch (_err) {
     throw new Error("Failed to fetch data")
   }
 }
@@ -65,7 +65,7 @@ async function getGameSorted() {
   try {
     const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game_day`, { cache: "no-store" })
     return res.json();
-  } catch (err) {
+  } catch (_err) {
     throw new Error("Failed to fetch data")
   }
 }
