@@ -12,7 +12,6 @@ type Props = {
 
 export async function generateMetadata(
   { params }: Props,
-  parent?: ResolvingMetadata
 ): Promise<Metadata>  {
   try {
     const response: GameProps = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${params.id}`, { next: { revalidate: 60 } })
