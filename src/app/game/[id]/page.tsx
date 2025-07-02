@@ -8,7 +8,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 export async function generateMetadata(
   { params }: { params: { id: string } },
-  parent: ResolvingMetadata
+  _parent: ResolvingMetadata
 ): Promise<Metadata> {
   const id = params.id;
 
