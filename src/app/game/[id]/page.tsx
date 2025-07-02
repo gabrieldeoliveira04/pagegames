@@ -4,19 +4,19 @@ import Image from 'next/image'
 import { Container } from '../../../components/container'
 import { Label } from './components/label'
 import { GameCard } from "../../../components/GameCard";
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export async function generateMetadata(
-  { params }: { params: { id: string } }
+  props: { params: { id: string } }
 ): Promise<Metadata> {
+  const id = props.params.id;
+
   try {
-    const response: GameProps = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${params.id}`, { next: { revalidate: 60 } })
+    const response: GameProps = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
       .then((res) => res.json())
-      .catch(() => {
-        return {
-          title: "DalyGames - Descubra jogos incríveis para se divertir."
-        }
-      })
+      .catch(() => ({
+        title: "DalyGames - Descubra jogos incríveis para se divertir."
+      }))
 
     return {
       title: response.title,
@@ -36,9 +36,6 @@ export async function generateMetadata(
         }
       }
     }
-
-
-
   } catch {
     return {
       title: "DalyGames - Descubra jogos incríveis para se divertir."
