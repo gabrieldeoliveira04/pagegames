@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Container } from '../../../components/container'
 import { Label } from './components/label'
 import { GameCard } from "../../../components/GameCard";
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 
 type Props = {
   params: { id: string }
