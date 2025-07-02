@@ -12,11 +12,8 @@ export async function generateMetadata(
   const id = props.params.id;
 
   try {
-    const response: GameProps = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
-      .then((res) => res.json())
-      .catch(() => ({
-        title: "DalyGames - Descubra jogos incríveis para se divertir."
-      }))
+    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } });
+    const response: GameProps = await res.json();
 
     return {
       title: response.title,
@@ -35,11 +32,11 @@ export async function generateMetadata(
           noimageindex: true,
         }
       }
-    }
+    };
   } catch {
     return {
       title: "DalyGames - Descubra jogos incríveis para se divertir."
-    }
+    };
   }
 }
 
