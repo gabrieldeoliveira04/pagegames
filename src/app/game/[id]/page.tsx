@@ -4,15 +4,18 @@ import Image from 'next/image'
 import { Container } from '../../../components/container'
 import { Label } from './components/label'
 import { GameCard } from "../../../components/GameCard";
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 export async function generateMetadata(
-  props: { params: { id: string } }
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const id = props.params.id;
+  const id = params.id;
 
   try {
-    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } });
+    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, {
+      next: { revalidate: 60 }
+    });
     const response: GameProps = await res.json();
 
     return {
@@ -20,7 +23,7 @@ export async function generateMetadata(
       description: `${response.description.slice(0, 100)}...`,
       openGraph: {
         title: response.title,
-        images: [response.image_url]
+        images: [response.image_url],
       },
       robots: {
         index: true,
