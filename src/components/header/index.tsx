@@ -1,4 +1,3 @@
-import logoImg from "@/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import DropdownMenuCheckboxes from "../dropDownmenu/dropDownmenu";
@@ -12,7 +11,7 @@ export function Header() {
         <nav className="flex justify-center items-center gap-4">
           <Link href="/">
             <Image
-              src={logoImg}
+              src="{/logo.svg}"
               alt="Logo do site dalygames"
               quality={100}
               priority={true}

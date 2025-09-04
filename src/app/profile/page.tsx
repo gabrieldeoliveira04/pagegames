@@ -1,6 +1,5 @@
 import { Container } from "../../components/container";
 import Image from 'next/image'
-import userImg from '@/assets/user.png'
 import { FaShareAlt } from 'react-icons/fa'
 
 import { FavoriteCard } from './components/favorite'
@@ -20,7 +19,7 @@ export default function Profile() {
         >
           <div className="w-full flex items-center gap-4 text-lg flex-col sm:flex-row justify-center sm:justify-normal">
             <Image
-              src={userImg}
+              src="/user.png"
               alt="Imagem perfil do usuario"
               className="rounded-full w-56 h-56 object-cover"
             />
