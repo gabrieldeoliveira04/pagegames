@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Games Catalog Platform
 
-## Getting Started
+Aplicação web desenvolvida para exibição e consulta de jogos digitais utilizando dados consumidos de uma API pública.
 
-First, run the development server:
+O projeto foi desenvolvido com foco em consumo de APIs REST, renderização dinâmica de dados, componentização e construção de interfaces modernas utilizando React e Vite.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A plataforma permite visualizar informações de jogos em tempo real, organizando dados obtidos externamente através de requisições HTTP.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Objetivo do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O principal objetivo do projeto foi praticar integração com APIs públicas, manipulação de dados externos e construção de interfaces frontend modernas e responsivas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O sistema foi desenvolvido para simular uma plataforma de catálogo de jogos, exibindo informações dinâmicas consumidas diretamente da API.
 
-## Learn More
+## Tecnologias Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+* React
+* Next
+* JavaScript
+* HTML
+* CSS
+* REST API
+* Fetch API
+* Git/GitHub
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Catálogo de Jogos
 
-## Deploy on Vercel
+* Listagem dinâmica de jogos
+* Exibição de informações obtidas via API
+* Atualização automática de dados consumidos da API pública
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Interface da Aplicação
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Interface responsiva
+* Organização visual de cards de jogos
+* Navegação simples e intuitiva
+* Estruturação de componentes reutilizáveis
+
+### Consumo de API
+
+* Integração com API pública de jogos
+* Requisições HTTP para obtenção de dados
+* Tratamento e renderização de informações no frontend
+
+## Estrutura da Aplicação
+
+O projeto foi estruturado utilizando componentização em React, visando organização de código, reutilização de componentes e separação de responsabilidades.
+
+## Conceitos Aplicados
+
+* Consumo de APIs REST
+* Manipulação de dados externos
+* Desenvolvimento Frontend com React
+* Componentização
+* Gerenciamento de estados
+* Estruturação de aplicações utilizando Vite
+* Interfaces responsivas
+* Renderização dinâmica de dados
+
+## Aprendizados
+
+Durante o desenvolvimento do projeto foram aplicados conceitos relacionados a:
+
+* Integração entre frontend e APIs externas
+* Manipulação de respostas HTTP
+* Estruturação de componentes reutilizáveis
+* Organização de interfaces modernas
+* Construção de aplicações web responsivas
+* Gerenciamento e exibição dinâmica de dados
+
